@@ -29,12 +29,18 @@ jobs:
 
       - name: Commit and push if changes
         run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+      
+          # Debug: Listar archivos en log/
+          echo "--- Archivos en log/ ---"
+          ls -la log/
+      
+          # Solo commitea si hay cambios
           if [ -n "$(find log/ -type f -name 'commits_*.txt')" ]; then
-            git config --global user.name "GitHub Actions"
-            git config --global user.email "actions@github.com"
             git add log/
             git commit -m "Auto: Add latest commits log"
             git push
           else
-            echo "No hay archivos de log nuevos para commitear."
+            echo "No hay archivos nuevos en log/ para commitear."
           fi
