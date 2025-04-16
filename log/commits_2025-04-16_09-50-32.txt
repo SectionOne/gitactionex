@@ -1,0 +1,5 @@
+Últimos 3 commits del repositorio:
+
+7260290 - Oriol, 19 seconds ago : Update log_commits.go
+9bbaecc - Oriol, 8 minutes ago : Update commit_logger.yml
+af7803b - Oriol, 16 minutes ago : Commit Inicial: Actualitzem yml
